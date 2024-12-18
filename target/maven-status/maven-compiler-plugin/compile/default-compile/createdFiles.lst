@@ -1,0 +1,4 @@
+com\chat\app\controllers\MessageController.class
+com\chat\app\config\Config.class
+com\chat\app\SpringChatroomApplication.class
+com\chat\app\models\Message.class
