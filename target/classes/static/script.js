@@ -72,8 +72,14 @@ function login() {
 }
 
 function logout() {
-    $("#chat-room").addClass('d-none')
-    $("#login-page").removeClass('d-none')
+    localStorage.removeItem("name")
+    localStorage.removeItem("avatar")
+    if (stompClient !== null) {
+        stompClient.disconnect();
+        $("#chat-room").addClass('d-none');
+        $("#login-page").removeClass('d-none');
+        window.location.reload();
+    }
 }
 
 // Add selected emoji to input field
